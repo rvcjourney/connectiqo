@@ -2479,18 +2479,18 @@ img {
 }
 
 .earnings-label {
-    font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.25rem;
 }
 
-.earnings-amount {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #fff;
-    font-family: var(--font-heading);
+.earnings-desc {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0.25rem;
 }
 
 .period-badge {
@@ -2530,10 +2530,11 @@ img {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.earnings-growth {
+.earnings-period-tabs {
     font-size: 0.85rem;
-    color: #55efc4;
-    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .sessions-count {
@@ -2629,4 +2630,179 @@ img {
     letter-spacing: 1px;
     color: var(--accent-purple);
     margin-bottom: 1rem;
+}
+
+/* ============================================================
+   HERO REDESIGN: Headline + feature pills + mentor card
+   ============================================================ */
+
+/* Tighten the h1 line-height for two-line headline */
+.hero-section h1 {
+    font-size: 4rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: #1a1a1a;
+    text-align: left;
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
+/* Feature pills — honest product description */
+.hero-feature-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.feature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.45rem 1rem;
+    background: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #444;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .hero-feature-pills {
+        justify-content: center;
+    }
+}
+
+/* ============================================================
+   HERO: Mentor Profile Card (clean — no fake stats)
+   ============================================================ */
+.mentor-profile-card {
+    width: 290px !important;
+    height: auto !important;
+    padding: 1.5rem !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    animation: floatMain 6s ease-in-out infinite !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+.mpc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.mpc-avatar {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-orange));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mpc-initials {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: var(--font-heading);
+}
+
+.mpc-online {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 11px;
+    height: 11px;
+    background: #22c55e;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.mpc-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: var(--font-heading);
+    margin-bottom: 2px;
+}
+
+.mpc-role {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 500;
+}
+
+/* Skill tags */
+.mpc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.mpc-tags span {
+    background: rgba(118, 75, 162, 0.08);
+    color: var(--accent-purple);
+    border: 1px solid rgba(118, 75, 162, 0.18);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+/* Availability line */
+.mpc-availability {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: #22c55e;
+    font-weight: 600;
+    background: rgba(34, 197, 94, 0.07);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 8px;
+    padding: 0.45rem 0.75rem;
+}
+
+/* Book button */
+.mpc-book-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-orange));
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.mpc-book-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Floating UI container */
+.hero-floating-ui {
+    position: relative;
+    width: 420px;
+    height: 390px;
+}
+
+@media (max-width: 900px) {
+    .mentor-profile-card {
+        width: 250px !important;
+    }
 }
