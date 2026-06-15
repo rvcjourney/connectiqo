@@ -79,8 +79,7 @@ img {
 }
 
 .logo img {
-    height: 40px;
-    /* Adjust based on preference */
+    height: 120px;
     width: auto;
 }
 
@@ -120,7 +119,7 @@ img {
 /* --- Light & Airy Hero Section --- */
 /* --- Light & Airy Hero Section --- */
 .hero-section {
-    padding-top: 8rem;
+    padding-top: 11rem;
     min-height: 90vh;
     background-color: #ffffff;
     /* Removed static image for dynamic CSS animation */
@@ -927,8 +926,7 @@ img {
 .hamburger-line {
     width: 100%;
     height: 3px;
-    background-color: #fff;
-    /* Default white on dark header */
+    background-color: #1a1a1a;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -1309,8 +1307,9 @@ img {
     }
 
     .header-container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .main-nav ul {
@@ -2033,7 +2032,7 @@ img {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 100px;
     width: auto;
     margin-bottom: 1rem;
     filter: brightness(0) invert(1);
@@ -2072,7 +2071,7 @@ img {
 }
 
 .site-footer .footer-bottom p {
-    color: #666;
+    color: #999;
     font-size: 0.85rem;
     margin: 0;
 }
@@ -2793,5 +2792,298 @@ img {
 @media (max-width: 900px) {
     .mentor-profile-card {
         width: 250px !important;
+    }
+}
+
+/* ============================================================
+   App Platform Badges (Hero)
+   ============================================================ */
+.app-platform-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.coming-soon-label {
+    font-size: 0.82rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.platform-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.35rem 0.9rem;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ============================================================
+   Founding Community Section
+   ============================================================ */
+.founding-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0f0a1e 0%, #1a0b2e 60%, #2d1b69 100%);
+}
+
+.founding-card {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.founding-tag {
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    background: rgba(118, 75, 162, 0.3);
+    border: 1px solid rgba(118, 75, 162, 0.5);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c4a8ff;
+    margin-bottom: 2rem;
+}
+
+.founding-card h2 {
+    font-size: 3rem;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 1.25rem;
+}
+
+.founding-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.founding-perks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.founding-perk {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.perk-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(118, 75, 162, 0.4), rgba(255, 126, 95, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.founding-perk strong {
+    display: block;
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.founding-perk p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.btn-founding-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #764ba2, #ff7e5f);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(118, 75, 162, 0.4);
+}
+
+.btn-founding-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(118, 75, 162, 0.55);
+}
+
+@media (max-width: 768px) {
+    .founding-perks {
+        grid-template-columns: 1fr;
+    }
+
+    .founding-card h2 {
+        font-size: 2rem;
+    }
+
+    .app-platform-row {
+        justify-content: center;
+    }
+}
+
+/* ============================================================
+   MOBILE: Comprehensive responsive overrides
+   ============================================================ */
+
+/* Tablet & large mobile (≤ 900px) */
+@media (max-width: 900px) {
+
+    /* Logo — mobile size */
+    .logo img {
+        height: 90px;
+    }
+
+    /* Section padding — 8rem is too tall on mobile */
+    .how-it-works-section,
+    .capabilities-section,
+    .categories-section,
+    .for-mentors-section,
+    .founding-section,
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .stats-section {
+        padding: 2.5rem 0;
+    }
+
+    /* Section headings */
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    /* For Mentors heading */
+    .mentor-section-content h2 {
+        font-size: 2rem;
+    }
+
+    /* Founding section heading */
+    .founding-card h2 {
+        font-size: 2rem;
+    }
+
+    /* Contact title */
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    /* Hero padding — enough for 90px logo + header padding */
+    .hero-section {
+        padding-top: 8rem;
+    }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+
+    /* Hero headline */
+    .hero-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    /* Stack CTA buttons vertically */
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-ghost {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Hide floating UI card — too cramped on small screens */
+    .hero-visual-content {
+        display: none;
+    }
+
+    /* Reduce hero bottom padding */
+    .hero-section {
+        padding-bottom: 2.5rem;
+    }
+
+    /* Feature pills — allow wrapping */
+    .hero-feature-pills {
+        gap: 8px;
+    }
+
+    .feature-pill {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Capability cards */
+    .capability-card {
+        padding: 1.5rem;
+    }
+
+    /* Step cards */
+    .step-card {
+        padding: 1.5rem;
+    }
+
+    /* Categories padding */
+    .categories-section {
+        padding: 3rem 0;
+    }
+
+    .category-pill {
+        font-size: 0.82rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Footer links — stack vertically */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    /* Stats strip — single column */
+    .stats-strip {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Contact form */
+    .contact-container {
+        padding: 0 1rem;
+    }
+
+    /* Founding section */
+    .founding-section {
+        padding: 3rem 0;
     }
 }
